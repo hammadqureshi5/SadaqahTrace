@@ -1,0 +1,121 @@
+.page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.hero {
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.85rem;
+}
+
+.hero p {
+  margin: 0;
+  color: #3d5349;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #d5e3db;
+  border-radius: 12px;
+  padding: 1.1rem 1.15rem 1.25rem;
+}
+
+.card h2 {
+  margin: 0 0 0.85rem;
+  font-size: 1.05rem;
+}
+
+label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin: 0.65rem 0 0.25rem;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  font: inherit;
+}
+
+input,
+select {
+  border: 1px solid #c5d4cc;
+  border-radius: 8px;
+  padding: 0.5rem 0.65rem;
+  background: #fbfdfc;
+}
+
+button {
+  margin-top: 0.95rem;
+  background: #1b6b4a;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #9b1c1c;
+  font-size: 0.9rem;
+  margin: 0.6rem 0 0;
+}
+
+.record {
+  grid-column: 1 / -1;
+}
+
+.meta {
+  display: grid;
+  gap: 0.35rem 1rem;
+  grid-template-columns: auto 1fr;
+  font-size: 0.92rem;
+}
+
+.meta dt {
+  color: #4a6358;
+  font-weight: 600;
+}
+
+.meta dd {
+  margin: 0;
+}
+
+.proof {
+  margin-top: 0.9rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e2ebe6;
+}
+
+.proof h3 {
+  margin: 0 0 0.4rem;
+  font-size: 0.95rem;
+}
+
+.muted {
+  color: #5b7167;
+  font-size: 0.9rem;
+}

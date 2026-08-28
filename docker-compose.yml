@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: trusttrack
+      POSTGRES_PASSWORD: trusttrack
+      POSTGRES_DB: trusttrack
+    ports:
+      - "5432:5432"
+    volumes:
+      - trusttrack_pg:/var/lib/postgresql/data
+
+volumes:
+  trusttrack_pg:

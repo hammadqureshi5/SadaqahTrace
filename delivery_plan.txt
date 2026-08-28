@@ -1,0 +1,14 @@
+What is built (current / end of this sprint, ~15%): Project scaffold is in place: React frontend, FastAPI backend, Postgres schema for NGOs, donors, donations, and proof uploads. Every donation is issued a unique tracking ID at creation. NGOs can upload a proof photo against that ID together with claimed GPS, timestamp, and aid type; files and metadata are stored and retrievable. No authenticity checks run yet — that is the next slice.
+
+What is left, in order:
+
+1. Image authenticity pipeline (core differentiator) — Error Level Analysis on JPEG uploads; perceptual hashing (imagehash) vs prior proofs to catch reused photos; EXIF GPS/DateTimeOriginal vs claimed delivery (missing EXIF = lower confidence, not auto-fail). Owner: Verification/ML + Backend.
+2. Aid-type content check — Lightweight vision-language call so the photo must match the declared aid type; failed checks flag for human review, not silent reject. Owner: Verification/ML.
+3. NGO trust score — Rolling aggregation of pass rates and duplicate flags per organization, shown to donors. Owner: Backend.
+4. Donor Q&A — pgvector on the same Postgres; retrieve only that donor’s verified records; LLM answers restricted to retrieved rows. Owner: Backend + Verification/ML.
+5. End-to-end product UI — NGO upload + flag/explain flow; donor tracking + trust score + Q&A. Owner: Frontend.
+6. Demo hardening — Seed demo NGO/donations, deploy a public demo, README for judges. Owner: whole team.
+
+Who is doing it: Backend owns API, schema, tracking IDs, trust score, RAG wiring. Frontend owns donor/NGO screens and flows. Verification/ML owns ELA, pHash, EXIF, and the VLM aid-type check. The team reviews flagged deliveries together so the product stays “support human review,” not automated rejection.
+
+Why this order: Scaffold and tracking IDs first so every later check has a real donation to attach to. Forensics next because that is the problem TrustTrack actually solves (evidence authenticity, not payment rails). Trust score and Q&A sit on top of verification history. Blockchain stays out of scope.
