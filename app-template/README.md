@@ -8,6 +8,10 @@ One Expo + React Native codebase for Android, iOS, and web.
 - Donation details and plain-language timeline
 - Privacy-aware delivery evidence
 - Verified NGO directory
+- NGO profile with three-part trust breakdown
+- About and How It Works
+- Contact and support form
+- NGO login and registration
 - NGO field capture placeholder
 - Trust-score breakdown and Q&A entry points
 
