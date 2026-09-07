@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "TrustTrack",
+    "slug": "trusttrack",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "scheme": "trusttrack",
+    "splash": { "backgroundColor": "#FBFAF6" },
+    "ios": { "supportsTablet": true, "bundleIdentifier": "org.trusttrack.app" },
+    "android": { "package": "org.trusttrack.app", "adaptiveIcon": { "backgroundColor": "#FBFAF6" } },
+    "web": { "bundler": "metro", "output": "single", "name": "TrustTrack" }
+  }
+}
